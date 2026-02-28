@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio | NGUYEN THI MINH ANH</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--ink-black: #121210;
+--ink-red: #8B0000;
+--ink-gold: #A67C52;
+--paper: #F7F4EE;
+--line: #D3C4B3;
+--fade: rgba(0,0,0,0.02);
+--card-bg: #ffffff;
+}
+
+body {
+font-family: 'Georgia', 'Noto Serif SC', serif;
+background-color: var(--paper);
+color: var(--ink-black);
+background-image:
+radial-gradient(circle at 10% 3%, var(--fade) 0%, transparent 1.2%),
+radial-gradient(circle at 90% 85%, var(--fade) 0%, transparent 1.2%);
+line-height: 1.85;
+overflow-x: hidden;
+}
+
+/* 中式卷轴头部 */
+.hero {
+position: relative;
+padding: 6rem 2rem 4rem;
+text-align: center;
+border-bottom: 1px solid var(--line);
+background: linear-gradient(to bottom, #FAF6F0, var(--paper));
+}
+
+.hero::before, .hero::after {
+content: '';
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+width: 82%;
+height: 1px;
+background: var(--line);
+}
+.hero::before { top: 3rem; }
+.hero::after { bottom: 2rem; }
+
+.profile-photo {
+width: 160px;
+height: 160px;
+border-radius: 50%;
+object-fit: cover;
+border: 3px solid var(--line);
+margin: 0 auto 1.5rem;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+font-size: 2.4rem;
+font-weight: 500;
+letter-spacing: 6px;
+color: var(--ink-black);
+margin-bottom: 0.8rem;
+}
+
+.hero .subtitle {
+font-size: 1.1rem;
+color: #444;
+letter-spacing: 2px;
+}
+
+/* 主容器 */
+.container {
+max-width: 1020px;
+margin: 0 auto;
+padding: 4rem 1.5rem;
+}
+
+/* 中式章节标题 */
+.section-title {
+position: relative;
+font-size: 1.6rem;
+font-weight: 500;
+margin: 5rem 0 2.5rem;
+padding-left: 1.4rem;
+letter-spacing: 1px;
+color: var(--ink-black);
+}
+.section-title::before {
+content: '';
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+width: 4px;
+height: 70%;
+background: var(--ink-red);
+}
+.section-title::after {
+content: '';
+position: absolute;
+left: 2.2rem;
+bottom: -6px;
+width: 70px;
+height: 1px;
+background: var(--ink-gold);
+}
+
+/* 高级中式卡片 */
+.card {
+position: relative;
+background: var(--card-bg);
+padding: 2.5rem;
+margin-bottom: 2.5rem;
+border-radius: 2px;
+border: 1px solid #E8E0D6;
+box-shadow:
+0 10px 25px rgba(0,0,0,0.04),
+0 3px 8px rgba(0,0,0,0.03);
+transition: all 0.35s ease;
+}
+.card:hover {
+transform: translateY(-4px);
+box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+font-size: 1.4rem;
+font-weight: 500;
+color: var(--ink-black);
+margin-bottom: 1rem;
+letter-spacing: 1px;
+}
+.card p {
+color: #333;
+margin-bottom: 1.2rem;
+font-size: 1.05rem;
+}
+.card a {
+color: var(--ink-red);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s;
+}
+.card a:hover {
+color: var(--ink-gold);
+}
+
+/* 中式技能标签 */
+.skills {
+display: flex;
+flex-wrap: wrap;
+gap: 1.2rem;
+margin-top: 1.5rem;
+}
+.skill {
+padding: 0.6rem 1.4rem;
+background: #F2EDE6;
+border: 1px solid var(--line);
+border-radius: 1px;
+font-size: 0.95rem;
+letter-spacing: 0.5px;
+}
+
+/* 中式分隔线 */
+.divider {
+width: 45%;
+height: 1px;
+background: var(--line);
+margin: 5rem auto;
+opacity: 0.6;
+}
+
+/* 页脚 */
+footer {
+padding: 4rem 2rem;
+text-align: center;
+border-top: 1px solid var(--line);
+font-size: 0.95rem;
+color: #555;
+letter-spacing: 1px;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+<h1>NGUYEN THI MINH ANH</h1>
+<p class="subtitle">Business Chinese | International Trade | Cross-Cultural Communication</p>
+</div>
+
+<div class="container">
+
+<!-- About Me -->
+<section>
+<h2 class="section-title">About Me</h2>
+<div class="card">
+<p>
+I am a third-year undergraduate student majoring in <strong>Business Chinese</strong> at Foreign Trade University.
+I specialize in cross-cultural communication, international business cooperation,
+Chinese-Vietnamese trade interpretation, and professional business language services.
+With solid linguistic competence and systematic academic training,
+I am dedicated to building professional bridges between Chinese and Vietnamese business environments.
+</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Education -->
+<section>
+<h2 class="section-title">Education</h2>
+<div class="card">
+<h3>Foreign Trade University</h3>
+<p>Bachelor of Business Chinese | Third-Year Student</p>
+<p>Student ID: K62.2314720007</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Language Proficiency -->
+<section>
+<h2 class="section-title">Language Proficiency</h2>
+<div class="card">
+<div class="skills">
+<div class="skill">HSK 6 (Chinese Proficiency)</div>
+<div class="skill">IELTS 5.5 (English)</div>
+<div class="skill">Aptis B2 (English)</div>
+<div class="skill">Native Vietnamese</div>
+<div class="skill">Business Chinese</div>
+<div class="skill">Cross-Cultural Communication</div>
+<div class="skill">Chinese-Vietnamese Translation</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Professional Skills -->
+<section>
+<h2 class="section-title">Professional Skills</h2>
+<div class="card">
+<p>• Business Chinese Writing & Oral Communication</p>
+<p>• Cross-cultural Negotiation & International Trade Assistance</p>
+<p>• Chinese-Vietnamese/English Interpretation & Translation</p>
+<p>• International Business Documentation & Formal Correspondence</p>
+<p>• Cross-border Business Cooperation Support</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Contact -->
+<section>
+<h2 class="section-title">Contact</h2>
+<div class="card">
+<p>Official Email: k62.2314720007@ftu.edu.vn</p>
+<p>Major: Business Chinese</p>
+<p>Institution: Foreign Trade University</p>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 NGUYEN THI MINH ANH | All Rights Reserved
+</footer>
+
+</body>
+</html>
